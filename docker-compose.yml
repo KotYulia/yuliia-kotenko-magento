@@ -1,5 +1,5 @@
 # SSL certificates for development
-# $ mkcert -cert-file=yuliia-kotenko-magento.local+1.pem -key-file=yuliia-kotenko-magento.local+1-key.pem yuliia-kotenko-magento.local www.yuliia-kotenko-magento.local
+# $ mkcert -cert-file=yuliia-kotenko-magento.us+1.pem -key-file=yuliia-kotenko-magento.us+1-key.pem yuliia-kotenko-magento.local www.yuliia-kotenko-magento.local yuliia-kotenko-magento.us www.yuliia-kotenko-magento.us
 #
 # Start composition:
 # $ docker-compose up -d
@@ -27,13 +27,13 @@ services:
     labels:
       - traefik.enable=true
       # HTTP
-      - traefik.http.routers.yuliia-kotenko-magento-local-http.rule=Host(`yuliia-kotenko-magento.local`,`www.yuliia-kotenko-magento.local`)
+      - traefik.http.routers.yuliia-kotenko-magento-local-http.rule=Host(`yuliia-kotenko-magento.local`,`www.yuliia-kotenko-magento.local`,`yuliia-kotenko-magento.us`,`www.yuliia-kotenko-magento.us`)
       - traefik.http.routers.yuliia-kotenko-magento-local-http.entrypoints=http
       - traefik.http.routers.yuliia-kotenko-magento-local-http.service=yuliia-kotenko-magento-local-http
       - traefik.http.services.yuliia-kotenko-magento-local-http.loadbalancer.server.port=80
       - traefik.http.services.yuliia-kotenko-magento-local-http.loadbalancer.server.scheme=http
       # HTTPS
-      - traefik.http.routers.yuliia-kotenko-magento-local-https.rule=Host(`yuliia-kotenko-magento.local`,`www.yuliia-kotenko-magento.local`)
+      - traefik.http.routers.yuliia-kotenko-magento-local-https.rule=Host(`yuliia-kotenko-magento.local`,`www.yuliia-kotenko-magento.local`,`yuliia-kotenko-magento.us`,`www.yuliia-kotenko-magento.us`)
       - traefik.http.routers.yuliia-kotenko-magento-local-https.entrypoints=https
       - traefik.http.routers.yuliia-kotenko-magento-local-https.tls=true
       - traefik.http.routers.yuliia-kotenko-magento-local-https.service=yuliia-kotenko-magento-local-https
@@ -41,7 +41,7 @@ services:
       - traefik.http.services.yuliia-kotenko-magento-local-https.loadbalancer.server.scheme=https
     # Must add extra_hosts to be written to /etc/hosts - otherwise containerized application can not curl itself
     extra_hosts:
-      - "yuliia-kotenko-magento.local www.yuliia-kotenko-magento.local:127.0.0.1"
+      - "yuliia-kotenko-magento.local www.yuliia-kotenko-magento.local yuliia-kotenko-magento.us www.yuliia-kotenko-magento.us:127.0.0.1"
       # Required for xDebug on Linux hosts till docker.host.internal is not available by default - https://github.com/docker/libnetwork/pull/2348/files
       - "host.docker.internal:172.17.0.1"
     links:
