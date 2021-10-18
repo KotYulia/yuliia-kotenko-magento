@@ -122,6 +122,10 @@
     Options +FollowSymLinks
     RewriteEngine on
 
+    SetEnvIf Host .*yuliia-kotenko-magento.local.* MAGE_RUN_CODE=default
+    SetEnvIf Host .*yuliia-kotenko-magento.local.* MAGE_RUN_TYPE=store
+    SetEnvIf Host .*yuliia-kotenko-magento.us.* MAGE_RUN_CODE=us_store_view
+    SetEnvIf Host .*yuliia-kotenko-magento.us.* MAGE_RUN_TYPE=store
 ############################################
 ## You can put here your magento root folder
 ## path relative to web root
