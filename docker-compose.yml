@@ -1,5 +1,5 @@
 # SSL certificates for development
-# $ mkcert -cert-file=yuliia-kotenko-magento.us+1.pem -key-file=yuliia-kotenko-magento.us+1-key.pem yuliia-kotenko-magento.local www.yuliia-kotenko-magento.local yuliia-kotenko-magento.us www.yuliia-kotenko-magento.us
+# $ mkcert -cert-file=yuliia-kotenko-magento.us+3.pem -key-file=yuliia-kotenko-magento.us+3-key.pem yuliia-kotenko-magento.local www.yuliia-kotenko-magento.local yuliia-kotenko-magento.us www.yuliia-kotenko-magento.us
 #
 # Start composition:
 # $ docker-compose up -d

@@ -362,6 +362,7 @@ return [
         'Vertex_RequestLoggingApi' => 1,
         'Vertex_RequestLogging' => 1,
         'Vertex_AddressValidation' => 1,
-        'Yotpo_Yotpo' => 1
+        'Yotpo_Yotpo' => 1,
+        'YuliiaK_ControllerDemos' => 1
     ]
 ];
