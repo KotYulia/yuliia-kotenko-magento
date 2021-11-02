@@ -1,11 +1,9 @@
 <?php
 declare(strict_types=1);
 
-
 namespace YuliiaK\ControllerDemos\Controller\ResponseController;
 
 use Magento\Framework\Controller\Result\Redirect;
-
 
 class RedirectResponseDemo implements
     \Magento\Framework\App\Action\HttpGetActionInterface
@@ -26,6 +24,8 @@ class RedirectResponseDemo implements
     }
 
     /**
+     * * Layout result demo: https://yuliia-kotenko-magento.us/yuliiak-controller-demos/responsecontroller/redirectresponsedemo
+     *
      * @return Redirect
      */
     public function execute(): Redirect
