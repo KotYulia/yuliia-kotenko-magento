@@ -1,0 +1,19 @@
+<h1>Page Response</h1>
+<ul>
+    <li>
+        <a href="<?= $block->getUrl('yuliiak_controllerdemos/responsecontroller/datafromform') ?>">DataFromForm page</a>
+    </li>
+    <li>
+        <a href="<?= $block->getUrl('yuliiak_controllerdemos/responsecontroller/redirectresponsedemo') ?>" target="_blank">RedirectResponseDemo page</a>
+    </li>
+    <li>
+        <a href="<?= $block->getUrl('yuliiak_controllerdemos/responsecontroller/forwardresponsedemo', ['vendor_name' => 'YuliiaK','module_name' => 'ControllerDemos']) ?>">ForwardResponseDemo page</a>
+    </li>
+</ul>
+<form action="<?= $block->getUrl('yuliiak_controllerdemos/responsecontroller/datafromform') ?>" method="get">
+    <label for="vendor-name">Vendor name: </label>
+    <input id="vendor-name" name="vendor_name" value="YuliiaK">
+    <label for="module-name">Module name: </label>
+    <input id="module-name" name="module_name" value="ControllerDemos">
+    <button type="submit">Submit</button>
+</form>
