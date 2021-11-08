@@ -354,6 +354,7 @@ return [
         'Klarna_Kp' => 1,
         'Klarna_Onsitemessaging' => 1,
         'Klarna_KpGraphQl' => 1,
+        'Mageplaza_Core' => 1,
         'PayPal_Braintree' => 1,
         'PayPal_BraintreeGraphQl' => 1,
         'Temando_ShippingRemover' => 1,
@@ -363,6 +364,7 @@ return [
         'Vertex_RequestLogging' => 1,
         'Vertex_AddressValidation' => 1,
         'Yotpo_Yotpo' => 1,
+        'YuliiaK_Cms' => 1,
         'YuliiaK_ControllerDemos' => 1
     ]
 ];

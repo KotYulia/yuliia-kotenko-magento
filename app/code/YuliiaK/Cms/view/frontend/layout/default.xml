@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd"
+>
+    <body>
+        <referenceContainer name="header.container">
+            <container name="yuliiak.cms.container" htmlTag="div" htmlClass="yuliiak-cms" before="-">
+                <block name="yuliiak.cms.info.block" class="Magento\Cms\Block\BlockByIdentifier">
+                    <arguments>
+                        <argument name="identifier" xsi:type="string">demo_info_block</argument>
+                    </arguments>
+                </block>
+            </container>
+        </referenceContainer>
+
+        <referenceContainer name="yuliiak.cms.left.column.info.container">
+            <block name="yuliiak.cms.left.column.info.block" class="Magento\Cms\Block\BlockByIdentifier">
+                <arguments>
+                    <argument name="identifier" xsi:type="string">left_column_info</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>
