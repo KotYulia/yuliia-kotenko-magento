@@ -1,0 +1,19 @@
+<h1><?= $escaper->escapeHtml(__('Page Response')) ?></h1>
+<ul>
+    <li>
+        <a href="<?= $escaper->escapeHtmlAttr($block->getUrl('yuliiak_controllerdemos/responsecontroller/datafromform')) ?>"><?= $escaper->escapeHtml(__('Data from form page')) ?></a>
+    </li>
+    <li>
+        <a href="<?= $escaper->escapeHtmlAttr($block->getUrl('yuliiak_controllerdemos/responsecontroller/redirectresponsedemo')) ?>" target="_blank"><?= $escaper->escapeHtml(__('Redirect response demo page')) ?></a>
+    </li>
+    <li>
+        <a href="<?= $escaper->escapeHtmlAttr($block->getUrl('yuliiak_controllerdemos/responsecontroller/forwardresponsedemo', ['vendor_name' => 'YuliiaK','module_name' => 'ControllerDemos'])) ?>"><?= $escaper->escapeHtml(__('Forward response demo page')) ?></a>
+    </li>
+</ul>
+<form action="<?= $escaper->escapeHtmlAttr($block->getUrl('yuliiak_controllerdemos/responsecontroller/datafromform')) ?>" method="get">
+    <label for="vendor-name"><?= $escaper->escapeHtml(__('Vendor name:')) ?> </label>
+    <input id="vendor-name" name="vendor_name" value="<?= $escaper->escapeHtmlAttr(__('YuliiaK')) ?>">
+    <label for="module-name"><?= $escaper->escapeHtml(__('Module name:')) ?> </label>
+    <input id="module-name" name="module_name" value="<?= $escaper->escapeHtmlAttr(__('ControllerDemos')) ?>">
+    <button type="submit"><?= $escaper->escapeHtml(__('Submit')) ?></button>
+</form>
