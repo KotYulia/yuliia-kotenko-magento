@@ -4,6 +4,6 @@
 >
     <body>
         <move element="product.info.social" destination="product.info.main" before="product.info.review"></move>
-        <move element="yuliiak.cms.product.demo.message" destination="content" before="-"></move>
+        <move element="yuliiak.catalog.product.demo.message" destination="content" before="-"></move>
     </body>
 </page>

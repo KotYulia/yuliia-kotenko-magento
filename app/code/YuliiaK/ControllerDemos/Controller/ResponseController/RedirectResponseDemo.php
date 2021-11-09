@@ -24,7 +24,7 @@ class RedirectResponseDemo implements
     }
 
     /**
-     * * Layout result demo: https://yuliia-kotenko-magento.us/yuliiak-controller-demos/responsecontroller/redirectresponsedemo
+     * Layout result demo: /yuliiak-controller-demos/responsecontroller/redirectresponsedemo
      *
      * @return Redirect
      */

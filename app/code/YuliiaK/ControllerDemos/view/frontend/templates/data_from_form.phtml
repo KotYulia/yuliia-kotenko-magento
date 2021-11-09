@@ -1,4 +1,10 @@
 <?php /** @var \Magento\Framework\View\Element\Template $block */ ?>
 <h1><?= $escaper->escapeHtml(__('Data From Form')) ?></h1>
-<p><?= $escaper->escapeHtml(__('Vendor name:')) ?> <?= $block->getRequest()->getParam('vendor_name') ?></p>
-<p><?= $escaper->escapeHtml(__('Module name:')) ?> <?= $block->getRequest()->getParam('module_name') ?></p>
+<p>
+    <?= $escaper->escapeHtml(__('Vendor name:')) ?>
+    <?= $escaper->escapeHtml(__($block->getRequest()->getParam('vendor_name')))?>
+</p>
+<p>
+    <?= $escaper->escapeHtml(__('Module name:')) ?>
+    <?= $escaper->escapeHtml(__($block->getRequest()->getParam('module_name'))) ?>
+</p>

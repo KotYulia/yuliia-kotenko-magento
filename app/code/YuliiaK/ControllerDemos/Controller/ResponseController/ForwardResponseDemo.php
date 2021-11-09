@@ -24,7 +24,7 @@ class ForwardResponseDemo implements
     }
 
     /**
-     * * Layout result demo: https://yuliia-kotenko-magento.us/yuliiak-controller-demos/responsecontroller/forwardresponsedemo
+     * * Layout result demo: /yuliiak-controller-demos/responsecontroller/forwardresponsedemo
      *
      * @return Forward
      */

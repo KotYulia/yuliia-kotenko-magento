@@ -364,6 +364,7 @@ return [
         'Vertex_RequestLogging' => 1,
         'Vertex_AddressValidation' => 1,
         'Yotpo_Yotpo' => 1,
+        'YuliiaK_Catalog' => 1,
         'YuliiaK_Cms' => 1,
         'YuliiaK_ControllerDemos' => 1
     ]

@@ -8,6 +8,9 @@ use Magento\Framework\View\Result\Page;
 class PageResponse implements
     \Magento\Framework\App\Action\HttpGetActionInterface
 {
+    /**
+     * @var \Magento\Framework\View\Result\PageFactory
+     */
     private \Magento\Framework\View\Result\PageFactory $pageFactory;
 
     /**
@@ -21,7 +24,7 @@ class PageResponse implements
     }
 
     /**
-     * Layout result demo: https://yuliia-kotenko-magento.us/yuliiak-controller-demos/responsecontroller/pageresponse
+     * Layout result demo: /yuliiak-controller-demos/responsecontroller/pageresponse
      *
      * @return Page
      */

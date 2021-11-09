@@ -8,10 +8,14 @@ use Magento\Framework\View\Result\Page;
 class DataFromForm implements
     \Magento\Framework\App\Action\HttpGetActionInterface
 {
+    /**
+     * @var \Magento\Framework\View\Result\PageFactory
+     */
     private \Magento\Framework\View\Result\PageFactory $pageFactory;
 
     /**
      * PageResponse constructor.
+     *
      * @param \Magento\Framework\View\Result\PageFactory $pageFactory
      */
     public function __construct(
