@@ -4,4 +4,6 @@
 Name,Ім'я
 Email,Електронна пошта
 "Send Request","Відправити запит"
+"Requested product: %1","Продукт: %1"
+"Message: %1","Моє повідомлення: %1"
 "Loyalty Program","Програма лояльності"
