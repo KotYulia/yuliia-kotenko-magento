@@ -95,6 +95,12 @@ class Request implements
         $customerRequest = $this->customerRequestFactory->create();
 
         try {
+            $productID = $this->request->getParam('product_id');
+
+            if ($productID) {
+                $customerRequest->setProductId((int) $productID);
+            }
+
             $customerRequest->setName($this->request->getParam('name'))
                 ->setEmail($this->request->getParam('email'))
                 ->setStoreId($this->storeManager->getStore()->getId());
