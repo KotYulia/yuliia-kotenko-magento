@@ -366,6 +366,7 @@ return [
         'Yotpo_Yotpo' => 1,
         'YuliiaK_Catalog' => 1,
         'YuliiaK_Cms' => 1,
-        'YuliiaK_ControllerDemos' => 1
+        'YuliiaK_ControllerDemos' => 1,
+        'YuliiaK_RegularCustomer' => 1
     ]
 ];
