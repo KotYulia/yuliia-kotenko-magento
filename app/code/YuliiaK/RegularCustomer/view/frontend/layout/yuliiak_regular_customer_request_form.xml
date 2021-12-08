@@ -15,10 +15,6 @@
                               path="yuliiak_regular_customer/index/request"
                               xsi:type="url"
                     />
-                    <argument name="product"
-                              helper="Magento\Catalog\Helper\Data::getProduct"
-                              xsi:type="helper"
-                    />
                 </arguments>
                 <block class="Magento\Cms\Block\BlockByIdentifier" name="yuliiak.regular.customer.discount.message">
                     <arguments>

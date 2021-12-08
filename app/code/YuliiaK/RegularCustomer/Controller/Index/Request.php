@@ -53,7 +53,6 @@ class Request implements
     private \Magento\Framework\Data\Form\FormKey\Validator $formKeyValidator;
 
     /**
-     * Request constructor.
      * @param \Magento\Framework\Controller\Result\RedirectFactory $redirectFactory
      * @param \Magento\Framework\Message\ManagerInterface $messageManager
      * @param \YuliiaK\RegularCustomer\Model\CustomerRequestFactory $customerRequestFactory
@@ -96,8 +95,13 @@ class Request implements
         $customerRequest = $this->customerRequestFactory->create();
 
         try {
-            $customerRequest->setProductId((int) $this->request->getParam('product_id'))
-                ->setName($this->request->getParam('name'))
+            $productID = $this->request->getParam('product_id');
+
+            if ($productID) {
+                $customerRequest->setProductId((int) $productID);
+            }
+
+            $customerRequest->setName($this->request->getParam('name'))
                 ->setEmail($this->request->getParam('email'))
                 ->setStoreId($this->storeManager->getStore()->getId());
 
