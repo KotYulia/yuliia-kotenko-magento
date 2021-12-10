@@ -8,7 +8,7 @@
                    name="customer-account-navigation-regular-customer"
             >
                 <arguments>
-                    <argument name="path" xsi:type="string">yuliiak_regular_customer/requests/view</argument>
+                    <argument name="path" xsi:type="string">yuliiak_regular_customer/request/view</argument>
                     <argument name="label" xsi:type="string" translate="true">Regular Customer</argument>
                     <argument name="sortOrder" xsi:type="number">100</argument>
                 </arguments>

@@ -37,21 +37,31 @@ class RequestList implements \Magento\Framework\View\Element\Block\ArgumentInter
     private ProductCollection $loadedProductCollection;
 
     /**
+     * @var \Magento\Catalog\Model\Product\Visibility $productVisibility
+     */
+    private \Magento\Catalog\Model\Product\Visibility $productVisibility;
+
+    /**
      * @param CustomerRequestCollectionFactory $customerRequestCollectionFactory
      * @param \Magento\Catalog\Model\ResourceModel\Product\CollectionFactory $productCollectionFactory
      * @param \Magento\Store\Model\StoreManagerInterface $storeManager
+     * @param \Magento\Catalog\Model\Product\Visibility $productVisibility
      */
     public function __construct(
         CustomerRequestCollectionFactory $customerRequestCollectionFactory,
         \Magento\Catalog\Model\ResourceModel\Product\CollectionFactory $productCollectionFactory,
-        \Magento\Store\Model\StoreManagerInterface $storeManager
+        \Magento\Store\Model\StoreManagerInterface $storeManager,
+        \Magento\Catalog\Model\Product\Visibility $productVisibility
     ) {
         $this->customerRequestCollectionFactory = $customerRequestCollectionFactory;
         $this->storeManager = $storeManager;
         $this->productCollectionFactory = $productCollectionFactory;
+        $this->productVisibility = $productVisibility;
     }
 
     /**
+     * Get a list of customer requests
+     *
      * @return CustomerRequestCollection
      * @throws \Magento\Framework\Exception\LocalizedException
      */
@@ -76,6 +86,8 @@ class RequestList implements \Magento\Framework\View\Element\Block\ArgumentInter
     }
 
     /**
+     * Get product for customer request
+     *
      * @param int $productId
      * @return Product|null
      * @throws \Magento\Framework\Exception\LocalizedException
@@ -90,9 +102,10 @@ class RequestList implements \Magento\Framework\View\Element\Block\ArgumentInter
         $productIds = array_filter($customerRequestCollection->getColumnValues('product_id'));
 
         $productCollection = $this->productCollectionFactory->create();
-        $productCollection->addAttributeToFilter('entity_id', $productIds)
+        $productCollection->addAttributeToFilter('entity_id', ['in' => $productIds])
             ->addAttributeToSelect('name')
-            ->addWebsiteFilter();
+            ->addWebsiteFilter()
+            ->setVisibility($this->productVisibility->getVisibleInSiteIds());
         $this->loadedProductCollection = $productCollection;
 
         return $this->loadedProductCollection->getItemById($productId);

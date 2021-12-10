@@ -10,5 +10,14 @@
                 </arguments>
             </block>
         </referenceBlock>
+
+        <referenceBlock name="top.links">
+            <block class="YuliiaK\RegularCustomer\Block\Link\RequestsLink" name="regular-customer-link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Regular Customer</argument>
+                    <argument name="sortOrder" xsi:type="number">30</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
     </body>
 </page>
