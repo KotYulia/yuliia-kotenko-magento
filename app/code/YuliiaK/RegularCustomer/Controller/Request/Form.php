@@ -13,6 +13,7 @@ class Form implements \Magento\Framework\App\Action\HttpGetActionInterface
     private \Magento\Framework\View\Result\PageFactory $pageFactory;
 
     /**
+     *
      * @param \Magento\Framework\View\Result\PageFactory $pageFactory
      */
     public function __construct(\Magento\Framework\View\Result\PageFactory $pageFactory)
@@ -22,6 +23,8 @@ class Form implements \Magento\Framework\App\Action\HttpGetActionInterface
     }
 
     /**
+     * Get Page
+     *
      * @return Page
      */
     public function execute(): Page
