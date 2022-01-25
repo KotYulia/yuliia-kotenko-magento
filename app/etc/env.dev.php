@@ -16,7 +16,7 @@ return [
         'table_prefix' => 'm2_',
         'connection' => [
             'default' => [
-                'host' => 'localhost',
+                'host' => 'mysql',
                 'dbname' => 'yuliia_kotenko_dev',
                 'username' => 'yuliia_kotenko_dev_user',
                 'password' => 'WPa@SNh8ug$ddkVp',

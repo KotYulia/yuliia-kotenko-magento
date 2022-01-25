@@ -16,10 +16,10 @@ return [
         'table_prefix' => 'm2_',
         'connection' => [
             'default' => [
-                'host' => 'mysql',
-                'dbname' => 'yuliia_kotenko_magento_local',
-                'username' => 'yuliia_kotenko_magento_local',
-                'password' => 'yuliia_kotenko_magento_local',
+                'host' => 'localhost',
+                'dbname' => 'yuliia_kotenko_build',
+                'username' => 'yuliia_kotenko_build_user',
+                'password' => 'WPa@SNh8ug$ddkVp',
                 'model' => 'mysql4',
                 'engine' => 'innodb',
                 'initStatements' => 'SET NAMES utf8;',
@@ -54,7 +54,7 @@ return [
     'lock' => [
         'provider' => 'db',
         'config' => [
-            'prefix' => null
+            'prefix' => ''
         ]
     ],
     'directories' => [
@@ -78,9 +78,26 @@ return [
         'vertex' => 1
     ],
     'downloadable_domains' => [
-        'yuliia-kotenko-magento.local'
+        'yuliia-kotenko-magento-local.allbugs.info'
     ],
     'install' => [
         'date' => 'Tue, 12 Oct 2021 15:04:03 +0000'
+    ],
+    'system' => [
+        'default' => [
+            'system' => [
+                'smtp' => [
+                    'disable' => 1
+                ],
+                'full_page_cache' => [
+                    'caching_application' => 1
+                ]
+            ],
+            'catalog' => [
+                'search' => [
+                    'elasticsearch7_index_prefix' => 'build'
+                ]
+            ]
+        ],
     ]
 ];
